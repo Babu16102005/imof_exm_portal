@@ -1,0 +1,57 @@
+- generic [ref=e3]:
+  - complementary "Admin sidebar" [ref=e4]:
+    - generic [ref=e5]:
+      - paragraph [ref=e6]: IMOF Admin
+      - paragraph [ref=e7]: Exam Portal Console
+    - navigation [ref=e8]:
+      - link "Dashboard" [ref=e9] [cursor=pointer]:
+        - /url: /admin
+      - link "Exams" [ref=e10] [cursor=pointer]:
+        - /url: /admin/exams
+      - link "Questions" [ref=e11] [cursor=pointer]:
+        - /url: /admin/questions
+      - link "Students" [ref=e12] [cursor=pointer]:
+        - /url: /admin/students
+      - link "Results" [ref=e13] [cursor=pointer]:
+        - /url: /admin/results
+    - link "View Site" [ref=e15] [cursor=pointer]:
+      - /url: /
+  - generic [ref=e16]:
+    - banner [ref=e17]:
+      - generic [ref=e18]:
+        - generic [ref=e19]: Welcome, admin
+        - button "Logout" [ref=e21] [cursor=pointer]
+    - main [ref=e22]:
+      - generic [ref=e23]:
+        - generic [ref=e24]:
+          - generic [ref=e25]:
+            - heading "Exams" [level=1] [ref=e26]
+            - paragraph [ref=e27]: Create papers, set windows, publish to students.
+          - button "+ New exam" [ref=e28] [cursor=pointer]
+        - table [ref=e31]:
+          - rowgroup [ref=e32]:
+            - row "Code Title / Olympiad Class Dur / Qs Status Actions" [ref=e33]:
+              - columnheader "Code" [ref=e34]
+              - columnheader "Title / Olympiad" [ref=e35]
+              - columnheader "Class" [ref=e36]
+              - columnheader "Dur / Qs" [ref=e37]
+              - columnheader "Status" [ref=e38]
+              - columnheader "Actions" [ref=e39]
+          - rowgroup [ref=e40]:
+            - row "IMOF-SVMO-2026 SVMO — Vedic Mathematics Olympiad 2026SVMO 3–10 60m / 5 published Edit Questions Students Results Delete" [ref=e41]:
+              - cell "IMOF-SVMO-2026" [ref=e42]
+              - cell "SVMO — Vedic Mathematics Olympiad 2026SVMO" [ref=e43]
+              - cell "3–10" [ref=e44]
+              - cell "60m / 5" [ref=e45]
+              - cell "published" [ref=e46]:
+                - button "published" [ref=e47] [cursor=pointer]
+              - cell "Edit Questions Students Results Delete" [ref=e48]:
+                - generic [ref=e49]:
+                  - button "Edit" [ref=e50] [cursor=pointer]
+                  - link "Questions" [ref=e51] [cursor=pointer]:
+                    - /url: /admin/questions?exam=exam-svmo-2026
+                  - link "Students" [ref=e52] [cursor=pointer]:
+                    - /url: /admin/students?exam=exam-svmo-2026
+                  - link "Results" [ref=e53] [cursor=pointer]:
+                    - /url: /admin/results?exam=exam-svmo-2026
+                  - button "Delete" [ref=e54] [cursor=pointer]

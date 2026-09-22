@@ -1,0 +1,79 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - link "Skip to main content" [ref=e5] [cursor=pointer]:
+      - /url: "#main-content"
+    - generic [ref=e6]:
+      - link "IMOF home" [ref=e7] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e8]: IM
+        - generic [ref=e9]:
+          - generic [ref=e10]: IMOF | Innovative Minds Olympiad Forum
+          - generic [ref=e11]: Exam Portal • 2026
+      - navigation "Primary" [ref=e12]:
+        - link "Home" [ref=e13] [cursor=pointer]:
+          - /url: /
+        - link "Olympiads" [ref=e14] [cursor=pointer]:
+          - /url: /#olympiads
+        - link "My Exams" [ref=e15] [cursor=pointer]:
+          - /url: /my-exams
+        - link "Exam Login" [ref=e16] [cursor=pointer]:
+          - /url: /login
+        - link "Admin" [ref=e17] [cursor=pointer]:
+          - /url: /admin
+  - status "Announcements" [ref=e18]:
+    - generic [ref=e19]:
+      - generic [ref=e20]: Notice
+      - generic [ref=e22]:
+        - generic [ref=e23]: "Exam Date Announced — IMOF Olympiads 2026 registrations open • Students: use your User ID & password to login and start your exam • For help write to info@imofedu.com •"
+        - generic [ref=e24]: "Exam Date Announced — IMOF Olympiads 2026 registrations open • Students: use your User ID & password to login and start your exam • For help write to info@imofedu.com •"
+  - main [ref=e25]:
+    - generic [ref=e26]:
+      - generic [ref=e28]:
+        - paragraph [ref=e29]: Welcome, Demo Student One
+        - heading "My Exams" [level=1] [ref=e30]
+        - paragraph [ref=e31]: User ID demo001 • Class 5 • SVMO Demo School
+      - article [ref=e33]:
+        - generic [ref=e34]:
+          - generic [ref=e35]:
+            - generic [ref=e36]: IMOF-SVMO-2026
+            - generic [ref=e37]: Available
+            - generic [ref=e38]: SVMO
+          - heading "SVMO Demo Olympiad 2026" [level=2] [ref=e39]
+          - paragraph [ref=e40]: 30 mins • 10 questions • 1 mark(s)/q • Class 1–10
+        - link "Start →" [ref=e42] [cursor=pointer]:
+          - /url: /instructions/5d68f0e1-02ad-44ed-bc4b-e4d637c826b5
+  - contentinfo [ref=e43]:
+    - generic [ref=e45]:
+      - generic [ref=e46]:
+        - paragraph [ref=e47]: IMOF Edu Solutions Pvt. Ltd.
+        - paragraph [ref=e48]: Innovative Minds Olympiad Forum — nurturing young achievers through 11 national olympiads across 10,000+ schools in India.
+        - paragraph [ref=e49]:
+          - link "info@imofedu.com" [ref=e50] [cursor=pointer]:
+            - /url: mailto:info@imofedu.com
+          - text: • www.imofedu.com
+        - paragraph [ref=e51]: +91 93457 80567 • +91 99628 56892
+      - navigation "Footer" [ref=e52]:
+        - paragraph [ref=e53]: Quick Links
+        - list [ref=e54]:
+          - listitem [ref=e55]:
+            - link "Home" [ref=e56] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e57]:
+            - link "Olympiads" [ref=e58] [cursor=pointer]:
+              - /url: /#olympiads
+          - listitem [ref=e59]:
+            - link "Exam Login" [ref=e60] [cursor=pointer]:
+              - /url: /login
+          - listitem [ref=e61]:
+            - link "My Exams & Results" [ref=e62] [cursor=pointer]:
+              - /url: /my-exams
+          - listitem [ref=e63]:
+            - link "Admin" [ref=e64] [cursor=pointer]:
+              - /url: /admin
+      - generic [ref=e65]:
+        - paragraph [ref=e66]: Exam Day
+        - list [ref=e67]:
+          - listitem [ref=e68]: Mon–Sat, 9:30 AM – 6:00 PM IST
+          - listitem [ref=e69]: Keep User ID & password ready — one attempt per paper
+          - listitem [ref=e70]: Use latest Chrome / Edge
+    - paragraph [ref=e72]: © 2026 IMOF Edu Solutions. Innovative Learning, Limitless Possibilities.

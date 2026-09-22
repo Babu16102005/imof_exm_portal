@@ -1,0 +1,88 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - link "Skip to main content" [ref=e5] [cursor=pointer]:
+      - /url: "#main-content"
+    - generic [ref=e6]:
+      - link "IMOF home" [ref=e7] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e8]: IM
+        - generic [ref=e9]:
+          - generic [ref=e10]: IMOF | Olympiad Forum
+          - generic [ref=e11]: Exam Portal • 2026
+      - generic [ref=e12]:
+        - link "Admin" [ref=e13] [cursor=pointer]:
+          - /url: /login
+        - button "Open menu" [ref=e14] [cursor=pointer]
+  - status "Announcements" [ref=e19]:
+    - generic [ref=e20]:
+      - generic [ref=e21]: Notice
+      - generic [ref=e23]:
+        - generic [ref=e24]: "Exam Date Announced — IMOF Olympiads 2026 registrations open • Students: use your User ID & password to login and start your exam • For help write to info@imofedu.com •"
+        - generic [ref=e25]: "Exam Date Announced — IMOF Olympiads 2026 registrations open • Students: use your User ID & password to login and start your exam • For help write to info@imofedu.com •"
+  - main [ref=e26]:
+    - generic [ref=e29]:
+      - paragraph [ref=e30]: IMOF Exam Portal
+      - heading "Login" [level=2] [ref=e31]
+      - paragraph [ref=e32]: Choose your login type to continue.
+      - tablist "Login type" [ref=e33]:
+        - tab "Student" [selected] [ref=e34] [cursor=pointer]
+        - tab "Admin" [ref=e35] [cursor=pointer]
+      - generic [ref=e36]:
+        - generic [ref=e37]:
+          - generic [ref=e38]: User ID
+          - textbox "User ID" [ref=e39]:
+            - /placeholder: demo001
+        - generic [ref=e40]:
+          - generic [ref=e41]: Password
+          - generic [ref=e42]:
+            - textbox "Password" [ref=e43]:
+              - /placeholder: ••••••••
+            - button "Show password" [ref=e44] [cursor=pointer]: Show
+        - button "Login & View My Exams" [ref=e45] [cursor=pointer]
+      - generic [ref=e46]:
+        - paragraph [ref=e48]: Demo hall-ticket stub
+        - generic [ref=e50]:
+          - paragraph [ref=e51]:
+            - text: Student
+            - code [ref=e52]: demo001 / demo123
+          - paragraph [ref=e53]:
+            - text: Admin
+            - code [ref=e54]: admin / imof2026
+      - paragraph [ref=e55]:
+        - link "← Back to home" [ref=e56] [cursor=pointer]:
+          - /url: /
+  - contentinfo [ref=e57]:
+    - generic [ref=e59]:
+      - generic [ref=e60]:
+        - paragraph [ref=e61]: IMOF Edu Solutions Pvt. Ltd.
+        - paragraph [ref=e62]: Innovative Minds Olympiad Forum — nurturing young achievers through 11 national olympiads across 10,000+ schools in India.
+        - paragraph [ref=e63]:
+          - link "info@imofedu.com" [ref=e64] [cursor=pointer]:
+            - /url: mailto:info@imofedu.com
+          - text: • www.imofedu.com
+        - paragraph [ref=e65]: +91 93457 80567 • +91 99628 56892
+      - navigation "Footer" [ref=e66]:
+        - paragraph [ref=e67]: Quick Links
+        - list [ref=e68]:
+          - listitem [ref=e69]:
+            - link "Home" [ref=e70] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e71]:
+            - link "Olympiads" [ref=e72] [cursor=pointer]:
+              - /url: /#olympiads
+          - listitem [ref=e73]:
+            - link "Exam Login" [ref=e74] [cursor=pointer]:
+              - /url: /login
+          - listitem [ref=e75]:
+            - link "My Exams & Results" [ref=e76] [cursor=pointer]:
+              - /url: /my-exams
+          - listitem [ref=e77]:
+            - link "Admin" [ref=e78] [cursor=pointer]:
+              - /url: /admin
+      - generic [ref=e79]:
+        - paragraph [ref=e80]: Exam Day
+        - list [ref=e81]:
+          - listitem [ref=e82]: Mon–Sat, 9:30 AM – 6:00 PM IST
+          - listitem [ref=e83]: Keep User ID & password ready — one attempt per paper
+          - listitem [ref=e84]: Use latest Chrome / Edge
+    - paragraph [ref=e86]: © 2026 IMOF Edu Solutions. Innovative Learning, Limitless Possibilities.

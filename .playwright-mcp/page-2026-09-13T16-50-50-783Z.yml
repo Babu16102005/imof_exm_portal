@@ -1,0 +1,264 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - link "Skip to main content" [ref=e5] [cursor=pointer]:
+      - /url: "#main-content"
+    - generic [ref=e6]:
+      - link "IMOF home" [ref=e7] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e8]: IM
+        - generic [ref=e9]:
+          - generic [ref=e10]: IMOF | Olympiad Forum
+          - generic [ref=e11]: Exam Portal • 2026
+      - generic [ref=e12]:
+        - link "Login" [ref=e13] [cursor=pointer]:
+          - /url: /login
+        - button "Open menu" [ref=e14] [cursor=pointer]
+  - status "Announcements" [ref=e19]:
+    - generic [ref=e20]:
+      - generic [ref=e21]: Notice
+      - generic [ref=e23]:
+        - generic [ref=e24]: "Exam Date Announced — IMOF Olympiads 2026 registrations open • Students: use your User ID & password to login and start your exam • For help write to info@imofedu.com •"
+        - generic [ref=e25]: "Exam Date Announced — IMOF Olympiads 2026 registrations open • Students: use your User ID & password to login and start your exam • For help write to info@imofedu.com •"
+  - main [ref=e26]:
+    - generic [ref=e27]:
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - paragraph [ref=e32]: Admissions open • 2026–27
+          - heading "Innovative Minds Olympiad Forum" [level=1] [ref=e34]:
+            - text: Innovative Minds
+            - text: Olympiad Forum
+          - paragraph [ref=e35]: India's trusted olympiad stage for Classes 1–10. Secure online papers, auto-submit timers and instant results — from any device, in one attempt.
+          - generic [ref=e36]:
+            - link "Start Exam →" [ref=e37] [cursor=pointer]:
+              - /url: /login
+            - link "View My Result" [ref=e38] [cursor=pointer]:
+              - /url: /my-exams
+          - generic [ref=e39]:
+            - generic [ref=e40]:
+              - definition [ref=e41]: 10,000+
+              - term [ref=e42]: Schools
+            - generic [ref=e43]:
+              - definition [ref=e44]: 7.4M+
+              - term [ref=e45]: Students
+            - generic [ref=e46]:
+              - definition [ref=e47]: "11"
+              - term [ref=e48]: Olympiads
+        - img "Sample IMOF hall ticket" [ref=e49]:
+          - generic [ref=e50]:
+            - paragraph [ref=e51]: Hall Ticket
+            - paragraph [ref=e52]: 2026–27
+          - generic [ref=e53]:
+            - generic [ref=e54]:
+              - paragraph [ref=e55]: Candidate
+              - paragraph [ref=e56]: Aarav Sharma
+              - paragraph [ref=e57]: IMOF1001 • Class 5
+              - generic [ref=e58]:
+                - paragraph [ref=e59]:
+                  - generic [ref=e60]: Paper
+                  - strong [ref=e61]: SVMO Maths
+                - paragraph [ref=e62]:
+                  - generic [ref=e63]: Duration
+                  - strong [ref=e64]: 30 mins
+                - paragraph [ref=e65]:
+                  - generic [ref=e66]: Attempts
+                  - strong [ref=e67]: 1 only
+            - generic [ref=e69]:
+              - paragraph [ref=e70]: Admit stub
+              - paragraph [ref=e71]: A • B • C • D
+              - paragraph [ref=e72]: Shade one bubble per question. Timer auto-submits at 00:00.
+              - link "Login to continue" [ref=e73] [cursor=pointer]:
+                - /url: /login
+      - region "IMOF in numbers" [ref=e75]:
+        - generic [ref=e76]:
+          - generic [ref=e77]:
+            - paragraph [ref=e78]: 10,000+
+            - paragraph [ref=e79]: Schools
+          - generic [ref=e80]:
+            - paragraph [ref=e81]: 7.4M+
+            - paragraph [ref=e82]: Students
+          - generic [ref=e83]:
+            - paragraph [ref=e84]: "11"
+            - paragraph [ref=e85]: Olympiads
+          - generic [ref=e86]:
+            - paragraph [ref=e87]: 500+
+            - paragraph [ref=e88]: Centres
+      - region "Three steps. One attempt." [ref=e89]:
+        - paragraph [ref=e90]: How it works
+        - heading "Three steps. One attempt." [level=2] [ref=e91]
+        - list [ref=e92]:
+          - listitem [ref=e93]:
+            - paragraph [ref=e94]: "01"
+            - heading "Login with User ID" [level=3] [ref=e95]
+            - paragraph [ref=e96]: Use the ID & password given by your school coordinator. One login, one paper.
+          - listitem [ref=e97]:
+            - paragraph [ref=e98]: "02"
+            - heading "Write the timed paper" [level=3] [ref=e99]
+            - paragraph [ref=e100]: Palette, mark-for-review and auto-save keep you safe even if the browser closes.
+          - listitem [ref=e101]:
+            - paragraph [ref=e102]: "03"
+            - heading "See instant result" [level=3] [ref=e103]
+            - paragraph [ref=e104]: Score, rank signals and question-wise breakdown the moment you submit.
+      - region "11 Olympiads. One stage for young achievers." [ref=e105]:
+        - paragraph [ref=e106]: Our Olympiads
+        - heading "11 Olympiads. One stage for young achievers." [level=2] [ref=e107]
+        - paragraph [ref=e108]: Every olympiad is grade-mapped with age-appropriate papers, medals and certificates at school, state and national levels.
+        - generic [ref=e109]:
+          - article [ref=e110]:
+            - generic [ref=e111]:
+              - generic [ref=e112]:
+                - generic [ref=e113]: ●
+                - text: SIRO
+              - generic [ref=e114]: Class 1 – 10
+            - img [ref=e116]
+            - heading "State Regional Olympiad" [level=3] [ref=e117]
+            - paragraph [ref=e118]: Boosts reasoning, assesses capability and helps students know their true potential.
+          - article [ref=e119]:
+            - generic [ref=e120]:
+              - generic [ref=e121]:
+                - generic [ref=e122]: ●
+                - text: SVMO
+              - generic [ref=e123]: Class 1 – 10
+            - img [ref=e125]
+            - heading "State Visionary Math Olympiad" [level=3] [ref=e126]
+            - paragraph [ref=e127]: Vedic maths, sutras and high-speed mental calculation for young problem-solvers.
+          - article [ref=e128]:
+            - generic [ref=e129]:
+              - generic [ref=e130]:
+                - generic [ref=e131]: ●
+                - text: SISO
+              - generic [ref=e132]: Class 1 – 10
+            - img [ref=e134]
+            - heading "State Inspired Science Olympiad" [level=3] [ref=e135]
+            - paragraph [ref=e136]: Concept-driven science with experiments and application-based thinking.
+          - article [ref=e137]:
+            - generic [ref=e138]:
+              - generic [ref=e139]:
+                - generic [ref=e140]: ●
+                - text: SCTO
+              - generic [ref=e141]: Class 1 – 10
+            - img [ref=e143]
+            - heading "State Computer Tech Olympiad" [level=3] [ref=e144]
+            - paragraph [ref=e145]: Computers, coding logic and digital awareness for the AI generation.
+          - article [ref=e146]:
+            - generic [ref=e147]:
+              - generic [ref=e148]:
+                - generic [ref=e149]: ●
+                - text: NIKO
+              - generic [ref=e150]: PREKG – UKG
+            - img [ref=e152]
+            - heading "National Innovative Kindergarten Olympiad" [level=3] [ref=e153]
+            - paragraph [ref=e154]: Play-based assessment for kindergarten — curiosity, phonics and early numeracy.
+          - article [ref=e155]:
+            - generic [ref=e156]:
+              - generic [ref=e157]:
+                - generic [ref=e158]: ●
+                - text: NIPO
+              - generic [ref=e159]: PREKG – 5
+            - img [ref=e161]
+            - heading "National Innovative Painting Olympiad" [level=3] [ref=e162]
+            - paragraph [ref=e163]: Drawing, colour and visual creativity judged at national level.
+          - article [ref=e164]:
+            - generic [ref=e165]:
+              - generic [ref=e166]:
+                - generic [ref=e167]: ●
+                - text: NIEO
+              - generic [ref=e168]: Class 6 – 10
+            - img [ref=e170]
+            - heading "National Inspired Essay Olympiad" [level=3] [ref=e171]
+            - paragraph [ref=e172]: Essay, grammar and expressive writing for confident communicators.
+          - article [ref=e173]:
+            - generic [ref=e174]:
+              - generic [ref=e175]:
+                - generic [ref=e176]: ●
+                - text: NIGKO
+              - generic [ref=e177]: Class 1 – 12
+            - img [ref=e179]
+            - heading "National Ingenious GK Olympiad" [level=3] [ref=e180]
+            - paragraph [ref=e181]: India & world GK, sports, culture and current affairs.
+          - article [ref=e182]:
+            - generic [ref=e183]:
+              - generic [ref=e184]:
+                - generic [ref=e185]: ●
+                - text: NIPO
+              - generic [ref=e186]: Class 11 – 12
+            - img [ref=e188]
+            - heading "National Innovative Physics Olympiad" [level=3] [ref=e189]
+            - paragraph [ref=e190]: Mechanics, light, electricity and physics numerics for senior students.
+          - article [ref=e191]:
+            - generic [ref=e192]:
+              - generic [ref=e193]:
+                - generic [ref=e194]: ●
+                - text: NICO
+              - generic [ref=e195]: Class 11 – 12
+            - img [ref=e197]
+            - heading "National Innovative Chemistry Olympiad" [level=3] [ref=e198]
+            - paragraph [ref=e199]: Mole concept, reactions and chemistry application at 11–12 level.
+          - article [ref=e200]:
+            - generic [ref=e201]:
+              - generic [ref=e202]:
+                - generic [ref=e203]: ●
+                - text: NIBO
+              - generic [ref=e204]: Class 11 – 12
+            - img [ref=e206]
+            - heading "National Innovative Biology Olympiad" [level=3] [ref=e207]
+            - paragraph [ref=e208]: Life science, human body and environment — senior biology.
+      - region "Welcome to the IMOF Exam Portal" [ref=e209]:
+        - generic [ref=e210]:
+          - generic [ref=e211]:
+            - heading "Welcome to the IMOF Exam Portal" [level=2] [ref=e212]
+            - paragraph [ref=e213]: Schools register students once — admins upload question papers and student lists via Excel, publish the exam window, and students login with their User ID to write the test from any device. Scores are computed automatically and toppers are highlighted for felicitation.
+            - list [ref=e214]:
+              - listitem [ref=e215]:
+                - generic [ref=e216]: ✓
+                - generic [ref=e217]: Timed player with question palette & mark-for-review
+              - listitem [ref=e218]:
+                - generic [ref=e219]: ✓
+                - generic [ref=e220]: Auto-save answers — safe even if the browser closes
+              - listitem [ref=e221]:
+                - generic [ref=e222]: ✓
+                - generic [ref=e223]: Instant results with question-wise breakdown
+          - generic [ref=e225]:
+            - paragraph [ref=e226]: Ready to write your olympiad?
+            - paragraph [ref=e227]: Keep your User ID & password ready. You get one attempt per exam — the timer starts the moment you begin.
+            - generic [ref=e228]:
+              - link "Start Exam" [ref=e229] [cursor=pointer]:
+                - /url: /login
+              - link "View Result" [ref=e230] [cursor=pointer]:
+                - /url: /my-exams
+  - contentinfo [ref=e232]:
+    - generic:
+      - img
+    - generic [ref=e234]:
+      - generic [ref=e235]:
+        - paragraph [ref=e236]: IMOF Edu Solutions Pvt. Ltd.
+        - paragraph [ref=e237]: Innovative Minds Olympiad Forum — nurturing young achievers through 11 national olympiads across 10,000+ schools in India.
+        - paragraph [ref=e238]:
+          - link "info@imofedu.com" [ref=e239] [cursor=pointer]:
+            - /url: mailto:info@imofedu.com
+          - text: • www.imofedu.com
+        - paragraph [ref=e240]: +91 93457 80567 • +91 99628 56892
+      - navigation "Footer" [ref=e241]:
+        - paragraph [ref=e242]: Quick Links
+        - list [ref=e243]:
+          - listitem [ref=e244]:
+            - link "Home" [ref=e245] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e246]:
+            - link "Olympiads" [ref=e247] [cursor=pointer]:
+              - /url: /#olympiads
+          - listitem [ref=e248]:
+            - link "Exam Login" [ref=e249] [cursor=pointer]:
+              - /url: /login
+          - listitem [ref=e250]:
+            - link "My Exams & Results" [ref=e251] [cursor=pointer]:
+              - /url: /my-exams
+          - listitem [ref=e252]:
+            - link "Admin" [ref=e253] [cursor=pointer]:
+              - /url: /admin
+      - generic [ref=e254]:
+        - paragraph [ref=e255]: Exam Day
+        - list [ref=e256]:
+          - listitem [ref=e257]: Mon–Sat, 9:30 AM – 6:00 PM IST
+          - listitem [ref=e258]: Keep User ID & password ready — one attempt per paper
+          - listitem [ref=e259]: Use latest Chrome / Edge
+    - paragraph [ref=e261]: © 2026 IMOF Edu Solutions. Innovative Learning, Limitless Possibilities.

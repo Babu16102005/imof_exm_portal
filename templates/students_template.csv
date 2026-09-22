@@ -1,0 +1,3 @@
+user_id,password,name,class,school,exam_code,is_active
+IMOF1001,mcq@imof,Aarav Sharma,5,SVMO Demo School,IMOF-SVMO-2026,true
+IMOF1002,mcq@imof,Diya Patel,5,SVMO Demo School,IMOF-SVMO-2026,true

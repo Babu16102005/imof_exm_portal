@@ -1,0 +1,96 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - link "Skip to main content" [ref=e5] [cursor=pointer]:
+      - /url: "#main-content"
+    - generic [ref=e6]:
+      - link "IMOF home" [ref=e7] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e8]: IM
+        - generic [ref=e9]:
+          - generic [ref=e10]: IMOF | Innovative Minds Olympiad Forum
+          - generic [ref=e11]: Exam Portal • 2026
+      - navigation "Primary" [ref=e12]:
+        - link "Home" [ref=e13] [cursor=pointer]:
+          - /url: /
+        - link "Olympiads" [ref=e14] [cursor=pointer]:
+          - /url: /#olympiads
+        - link "My Exams" [ref=e15] [cursor=pointer]:
+          - /url: /my-exams
+        - link "Exam Login" [ref=e16] [cursor=pointer]:
+          - /url: /login
+        - link "Admin" [ref=e17] [cursor=pointer]:
+          - /url: /admin
+  - status "Announcements" [ref=e18]:
+    - generic [ref=e19]:
+      - generic [ref=e20]: Notice
+      - generic [ref=e22]:
+        - generic [ref=e23]: "Exam Date Announced — IMOF Olympiads 2026 registrations open • Students: use your User ID & password to login and start your exam • For help write to info@imofedu.com •"
+        - generic [ref=e24]: "Exam Date Announced — IMOF Olympiads 2026 registrations open • Students: use your User ID & password to login and start your exam • For help write to info@imofedu.com •"
+  - main [ref=e25]:
+    - generic [ref=e26]:
+      - paragraph [ref=e27]: IMOF-SVMO-2026
+      - heading "SVMO — Vedic Mathematics Olympiad 2026" [level=1] [ref=e28]
+      - generic [ref=e29]:
+        - generic [ref=e30]:
+          - paragraph [ref=e31]: 60 min
+          - paragraph [ref=e32]: Duration
+        - generic [ref=e33]:
+          - paragraph [ref=e34]: "5"
+          - paragraph [ref=e35]: Questions
+        - generic [ref=e36]:
+          - paragraph [ref=e37]: "5"
+          - paragraph [ref=e38]: Total marks
+      - generic [ref=e39]:
+        - heading "General Instructions — read carefully" [level=2] [ref=e40]
+        - list [ref=e41]:
+          - listitem [ref=e42]: 1. Each question carries the marks shown against it. There is no negative marking unless specifically mentioned on the paper.
+          - listitem [ref=e43]: 2. Do not refresh, close or navigate away from the exam window. The timer keeps running and answers auto-save every few seconds.
+          - listitem [ref=e44]: 3. The countdown timer auto-submits your paper at 00:00. Unanswered questions are marked as zero — there is no extra time.
+          - listitem [ref=e45]: 4. You get only ONE attempt per exam. Once submitted, re-entry is blocked and the result page becomes final.
+          - listitem [ref=e46]: 5. Any malpractice — multiple logins, screen-sharing, copying or impersonation — leads to immediate disqualification without refund.
+          - listitem [ref=e47]: 6. Ensure a stable internet connection and a quiet room. In case of a technical issue, contact your coordinator or info@imofedu.com immediately.
+        - generic [ref=e48]:
+          - paragraph [ref=e49]: Paper-specific note
+          - paragraph [ref=e50]: Answer all questions. Each question carries 1 mark. Do not refresh during the exam.
+        - generic [ref=e51] [cursor=pointer]:
+          - checkbox "I have read and understood all instructions above and agree to follow the IMOF exam rules." [checked] [ref=e52]
+          - generic [ref=e53]: I have read and understood all instructions above and agree to follow the IMOF exam rules.
+        - generic [ref=e54]:
+          - button "Start Test" [ref=e55] [cursor=pointer]
+          - link "Back" [ref=e56] [cursor=pointer]:
+            - /url: /my-exams
+  - contentinfo [ref=e57]:
+    - generic [ref=e59]:
+      - generic [ref=e60]:
+        - paragraph [ref=e61]: IMOF Edu Solutions Pvt. Ltd.
+        - paragraph [ref=e62]: Innovative Minds Olympiad Forum — nurturing young achievers through 11 national olympiads across 10,000+ schools in India.
+        - paragraph [ref=e63]:
+          - link "info@imofedu.com" [ref=e64] [cursor=pointer]:
+            - /url: mailto:info@imofedu.com
+          - text: • www.imofedu.com
+        - paragraph [ref=e65]: +91 93457 80567 • +91 99628 56892
+      - navigation "Footer" [ref=e66]:
+        - paragraph [ref=e67]: Quick Links
+        - list [ref=e68]:
+          - listitem [ref=e69]:
+            - link "Home" [ref=e70] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e71]:
+            - link "Olympiads" [ref=e72] [cursor=pointer]:
+              - /url: /#olympiads
+          - listitem [ref=e73]:
+            - link "Exam Login" [ref=e74] [cursor=pointer]:
+              - /url: /login
+          - listitem [ref=e75]:
+            - link "My Exams & Results" [ref=e76] [cursor=pointer]:
+              - /url: /my-exams
+          - listitem [ref=e77]:
+            - link "Admin" [ref=e78] [cursor=pointer]:
+              - /url: /admin
+      - generic [ref=e79]:
+        - paragraph [ref=e80]: Exam Day
+        - list [ref=e81]:
+          - listitem [ref=e82]: Mon–Sat, 9:30 AM – 6:00 PM IST
+          - listitem [ref=e83]: Keep User ID & password ready — one attempt per paper
+          - listitem [ref=e84]: Use latest Chrome / Edge
+    - paragraph [ref=e86]: © 2026 IMOF Edu Solutions. Innovative Learning, Limitless Possibilities.

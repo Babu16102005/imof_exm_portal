@@ -1,0 +1,50 @@
+- generic [ref=e87]:
+  - banner [ref=e88]:
+    - generic [ref=e89]:
+      - generic [ref=e90]:
+        - generic [ref=e91]:
+          - paragraph [ref=e92]: IMOF-SVMO-2026 • SVMO — Vedic Mathematics Olympiad 2026
+          - paragraph [ref=e93]: Q 1 of 5 • Answered 0 • Saved ✓
+        - timer "Time remaining 59:12" [ref=e147]: 59:12
+      - button "End Test" [ref=e96] [cursor=pointer]
+  - generic [ref=e100]:
+    - region "Question 1" [ref=e101]:
+      - generic [ref=e102]:
+        - generic [ref=e103]: Q1
+        - generic [ref=e104]: 1 mark
+      - heading "What is 25 + 37?" [level=2] [ref=e105]
+      - radiogroup "Options for question 1" [ref=e106]:
+        - generic [ref=e107] [cursor=pointer]:
+          - 'radio "Option B: 62" [ref=e108]'
+          - generic [ref=e109]: B
+          - generic [ref=e110]: "62"
+        - generic [ref=e111] [cursor=pointer]:
+          - 'radio "Option D: 60" [ref=e112]'
+          - generic [ref=e113]: D
+          - generic [ref=e114]: "60"
+        - generic [ref=e115] [cursor=pointer]:
+          - 'radio "Option A: 52" [ref=e116]'
+          - generic [ref=e117]: A
+          - generic [ref=e118]: "52"
+        - generic [ref=e119] [cursor=pointer]:
+          - 'radio "Option C: 72" [ref=e120]'
+          - generic [ref=e121]: C
+          - generic [ref=e122]: "72"
+    - complementary "Question palette" [ref=e127]:
+      - generic [ref=e128]:
+        - paragraph [ref=e129]: Palette
+        - button "☆ Mark" [ref=e141] [cursor=pointer]
+      - generic [ref=e130]:
+        - button "Go to question 1, unanswered, current" [ref=e131] [cursor=pointer]: "1"
+        - button "Go to question 2, unanswered" [ref=e132] [cursor=pointer]: "2"
+        - button "Go to question 3, unanswered" [ref=e133] [cursor=pointer]: "3"
+        - button "Go to question 4, unanswered" [ref=e134] [cursor=pointer]: "4"
+        - button "Go to question 5, unanswered" [ref=e135] [cursor=pointer]: "5"
+      - generic [ref=e136]:
+        - paragraph [ref=e137]: ● Answered (0)
+        - paragraph [ref=e138]: ● Marked
+        - paragraph [ref=e139]: ● Left (5)
+  - navigation "Exam navigation" [ref=e142]:
+    - generic [ref=e143]:
+      - button "← Prev" [disabled] [ref=e144]
+      - button "Save & Next →" [ref=e145] [cursor=pointer]

@@ -1,0 +1,809 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Bubblegum+Sans&family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Poppins:wght@500;600;700&display=swap');
+@import "tw-animate-css";
+@import "@fontsource-variable/geist";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --imof-navy: #0b2f6b;
+  --imof-ink: #071e45;
+  --imof-blue: #1450a0;
+  --imof-saffron: #f59e0b;
+  --imof-bg: #f6f8fc;
+  --imof-paper: #fffdf4;
+  --imof-ledger: #e7ecf5;
+  --font-display: 'Righteous', 'Fraunces', 'Poppins', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+  --font-imof: 'Righteous', 'Fraunces', cursive;
+  --font-bubble: 'Bubblegum Sans', 'Righteous', cursive;
+  /* IMOF marketing-site graft — type + hover only (glass/layout untouched) */
+  --imof-heading: #050748;
+  --imof-body: #6a6a8e;
+  --imof-underline: #ef7f1b;
+  --imof-vermilion: #ff3d00;
+  --imof-cyan: #00bcd4;
+  --imof-ease: cubic-bezier(0.17, 0.85, 0.438, 0.99);
+  /* Liquid-glass material tokens — enhanced */
+  --glass-white: rgba(255, 255, 255, 0.72);
+  --glass-white-strong: rgba(255, 255, 255, 0.88);
+  --glass-white-ultra: rgba(255, 255, 255, 0.94);
+  --glass-stroke: rgba(255, 255, 255, 0.70);
+  --glass-stroke-subtle: rgba(255, 255, 255, 0.45);
+  --glass-ink: rgba(7, 30, 69, 0.80);
+  --glass-ink-strong: rgba(7, 30, 69, 0.92);
+  --chrome: linear-gradient(135deg, #f8fafc 0%, #cbd5e1 28%, #f1f5f9 50%, #94a3b8 72%, #e2e8f0 100%);
+  --chrome-gold: linear-gradient(135deg, #fde68a 0%, #f59e0b 35%, #fbbf24 55%, #b45309 80%, #fcd34d 100%);
+  /* Multi-layer shadow system (macOS depth) */
+  --glass-shadow-xs:  0 2px 8px rgba(7,30,69,0.07), 0 1px 2px rgba(7,30,69,0.04);
+  --glass-shadow:     0 4px 16px rgba(7,30,69,0.10), 0 8px 32px rgba(7,30,69,0.08), 0 1px 3px rgba(7,30,69,0.05);
+  --glass-shadow-lg:  0 8px 24px rgba(7,30,69,0.12), 0 24px 64px rgba(7,30,69,0.14), 0 2px 8px rgba(7,30,69,0.07);
+  --glass-shadow-xl:  0 12px 40px rgba(7,30,69,0.16), 0 32px 80px rgba(7,30,69,0.18), 0 2px 12px rgba(7,30,69,0.08);
+  /* Specular top-edge highlight (macOS liquid glass signature) */
+  --specular-top:   inset 0 1px 0 rgba(255,255,255,0.90), inset 0 -1px 0 rgba(255,255,255,0.08);
+  --specular-inner: inset 0 1px 0 rgba(255,255,255,0.85), inset 1px 0 0 rgba(255,255,255,0.30), inset -1px 0 0 rgba(255,255,255,0.12);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background:
+    radial-gradient(1200px 500px at 90% -180px, rgba(245,158,11,0.12), transparent 60%),
+    radial-gradient(1000px 600px at 5% -160px, rgba(20,80,160,0.13), transparent 60%),
+    radial-gradient(700px 350px at 50% 85%, rgba(20,80,160,0.05), transparent 70%),
+    var(--imof-bg);
+  background-attachment: fixed;
+  color: #1e293b;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
+}
+
+h1,
+h2,
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+button,
+a {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: rgba(245, 158, 11, 0.25);
+}
+
+.modal-sheet {
+  overscroll-behavior: contain;
+  background: var(--glass-white-strong);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  backdrop-filter: blur(24px) saturate(160%);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  background: #f59e0b;
+  color: #071e45;
+}
+
+@layer components {
+  /* Frosted light panel — enhanced liquid glass surface */
+  .card {
+    @apply rounded-2xl p-5 sm:p-6;
+    background: var(--glass-white);
+    -webkit-backdrop-filter: blur(24px) saturate(180%) brightness(1.03);
+    backdrop-filter: blur(24px) saturate(180%) brightness(1.03);
+    border: 1px solid var(--glass-stroke);
+    box-shadow: var(--glass-shadow), var(--specular-top);
+    position: relative;
+    overflow: hidden;
+  }
+  .card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(155deg, rgba(255,255,255,0.20) 0%, transparent 45%);
+    pointer-events: none;
+    border-radius: inherit;
+    z-index: 0;
+  }
+  .card > * { position: relative; z-index: 1; }
+
+  /* Dark navy frosted chrome — headers, player bar, admin rail */
+  .glass-ink {
+    background: linear-gradient(180deg, rgba(11,47,107,0.92) 0%, rgba(7,30,69,0.88) 100%);
+    -webkit-backdrop-filter: blur(28px) saturate(180%);
+    backdrop-filter: blur(28px) saturate(180%);
+    border-bottom: 1px solid rgba(255,255,255,0.16);
+    box-shadow: 0 8px 40px rgba(7,30,69,0.32), inset 0 1px 0 rgba(255,255,255,0.16), inset 0 -1px 0 rgba(0,0,0,0.18);
+  }
+
+  /* Frosted panel — lighter glass for secondary panels */
+  .glass-panel {
+    background: rgba(255,255,255,0.62);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    backdrop-filter: blur(20px) saturate(160%);
+    border: 1px solid rgba(255,255,255,0.68);
+    box-shadow: var(--glass-shadow), var(--specular-top);
+    border-radius: 1.25rem;
+  }
+
+  /* Glass section band */
+  .glass-band {
+    background: rgba(255,255,255,0.70);
+    -webkit-backdrop-filter: blur(20px) saturate(155%);
+    backdrop-filter: blur(20px) saturate(155%);
+    border-top: 1px solid rgba(255,255,255,0.75);
+    border-bottom: 1px solid rgba(255,255,255,0.55);
+    box-shadow: 0 2px 16px rgba(7,30,69,0.06), inset 0 1px 0 rgba(255,255,255,0.90);
+  }
+
+  .btn-primary {
+    @apply inline-flex min-h-[44px] items-center justify-center overflow-hidden rounded-xl px-5 py-2.5 font-display text-sm font-bold text-white focus:outline-none focus-visible:ring-[3px] focus-visible:ring-amber-400 focus-visible:ring-offset-2 active:scale-[0.97] disabled:cursor-not-allowed disabled:opacity-60;
+    background: linear-gradient(180deg, #1d5cb8 0%, #0b2f6b 55%, #082452 100%);
+    border: 1px solid rgba(255,255,255,0.24);
+    box-shadow:
+      0 8px 28px rgba(11,47,107,0.42),
+      0 2px 8px rgba(11,47,107,0.24),
+      inset 0 1px 0 rgba(255,255,255,0.42),
+      inset 0 -2px 6px rgba(0,0,0,0.28);
+  }
+  .btn-primary:hover {
+    filter: brightness(1.12) saturate(1.1);
+  }
+  .btn-accent {
+    @apply inline-flex min-h-[44px] items-center justify-center overflow-hidden rounded-xl px-5 py-2.5 font-display text-sm font-bold focus:outline-none focus-visible:ring-[3px] focus-visible:ring-imof-navy focus-visible:ring-offset-2 active:scale-[0.97] disabled:cursor-not-allowed disabled:opacity-60;
+    color: #071e45;
+    background: var(--chrome-gold);
+    background-size: 180% 180%;
+    border: 1px solid rgba(255,255,255,0.60);
+    box-shadow:
+      0 8px 28px rgba(245,158,11,0.44),
+      0 2px 8px rgba(245,158,11,0.28),
+      inset 0 1px 0 rgba(255,255,255,0.72),
+      inset 0 -2px 6px rgba(120,53,15,0.32);
+  }
+  .btn-accent:hover {
+    filter: brightness(1.07);
+  }
+  .btn-danger {
+    @apply inline-flex min-h-[44px] items-center justify-center rounded-xl bg-red-600/95 px-5 py-2.5 font-display text-sm font-bold text-white focus:outline-none focus-visible:ring-[3px] focus-visible:ring-red-400 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.22);
+    box-shadow: 0 8px 24px rgba(220,38,38,0.35), inset 0 1px 0 rgba(255,255,255,0.30);
+  }
+  .btn-danger:hover {
+    @apply bg-red-700;
+  }
+  .btn-ghost {
+    @apply inline-flex min-h-[44px] items-center justify-center rounded-xl px-5 py-2.5 font-display text-sm font-bold text-slate-600 focus:outline-none focus-visible:ring-[3px] focus-visible:ring-imof-blue/40 disabled:cursor-not-allowed disabled:opacity-60;
+    background: rgba(255,255,255,0.62);
+    -webkit-backdrop-filter: blur(16px) saturate(150%);
+    backdrop-filter: blur(16px) saturate(150%);
+    border: 1px solid rgba(203,213,225,0.85);
+    box-shadow: var(--glass-shadow-xs), inset 0 1px 0 rgba(255,255,255,0.82);
+  }
+  .btn-ghost:hover {
+    background: rgba(255,255,255,0.90);
+    box-shadow: var(--glass-shadow), inset 0 1px 0 rgba(255,255,255,0.90);
+  }
+  .input {
+    @apply min-h-[48px] w-full rounded-xl px-3.5 py-2.5 text-[16px] text-slate-900 placeholder:text-slate-400 focus:border-imof-blue focus:outline-none focus:ring-[3px] focus:ring-imof-blue/30 sm:text-sm;
+    background: rgba(255,255,255,0.80);
+    -webkit-backdrop-filter: blur(16px) saturate(150%);
+    backdrop-filter: blur(16px) saturate(150%);
+    border: 1px solid rgba(203,213,225,0.92);
+    box-shadow: inset 0 2px 8px rgba(7,30,69,0.07), inset 0 1px 0 rgba(255,255,255,0.72);
+    transition: box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+  }
+  .input:focus {
+    background: rgba(255,255,255,0.94);
+    box-shadow: inset 0 1px 4px rgba(7,30,69,0.04), 0 0 0 3px rgba(20,80,160,0.14), 0 4px 12px rgba(20,80,160,0.08);
+  }
+  .label {
+    @apply mb-1.5 block font-display text-sm font-semibold text-[#050748];
+    letter-spacing: 0.01em;
+  }
+  /* Hall-ticket stub — enhanced frosted, chrome edge */
+  .ticket {
+    @apply relative overflow-hidden rounded-2xl;
+    background: var(--glass-white-strong);
+    -webkit-backdrop-filter: blur(32px) saturate(200%) brightness(1.04);
+    backdrop-filter: blur(32px) saturate(200%) brightness(1.04);
+    border: 1px solid var(--glass-stroke);
+    box-shadow: var(--glass-shadow-lg), var(--specular-inner);
+  }
+  .ticket::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(145deg, rgba(255,255,255,0.22) 0%, transparent 45%);
+    pointer-events: none;
+    border-radius: inherit;
+    z-index: 0;
+  }
+  .ticket > * { position: relative; z-index: 1; }
+
+  .ticket-perf {
+    background-image: radial-gradient(circle, var(--imof-bg) 5px, transparent 5.5px);
+    background-size: 16px 16px;
+    background-repeat: repeat-y;
+    background-position: center;
+  }
+  /* OMR answer-bubble strip divider */
+  .omr-strip {
+    background-image: radial-gradient(circle, currentColor 2.5px, transparent 3px);
+    background-size: 22px 12px;
+    background-repeat: repeat-x;
+    background-position: center;
+  }
+  .stamp {
+    @apply inline-flex items-center gap-1 rounded-full border-2 px-2.5 py-0.5 text-[11px] font-extrabold uppercase tracking-widest;
+  }
+  .ledger-bg {
+    background-image: linear-gradient(rgba(231, 236, 245, 0.5) 1px, transparent 1px);
+    background-size: 100% 32px;
+  }
+  /* Liquid-metal gradient display text */
+  .chrome-text {
+    background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 45%, #f8fafc 55%, #94a3b8 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  /* Stat card — premium glass */
+  .stat-card {
+    background: rgba(255,255,255,0.76);
+    -webkit-backdrop-filter: blur(24px) saturate(170%);
+    backdrop-filter: blur(24px) saturate(170%);
+    border: 1px solid rgba(255,255,255,0.82);
+    border-radius: 1.25rem;
+    box-shadow: var(--glass-shadow-lg), var(--specular-top);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.35s var(--imof-ease), box-shadow 0.35s var(--imof-ease);
+  }
+  .stat-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(145deg, rgba(255,255,255,0.28) 0%, transparent 50%);
+    border-radius: inherit;
+    pointer-events: none;
+  }
+  .stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--glass-shadow-xl), var(--specular-top);
+  }
+  /* Glass divider */
+  .glass-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.65) 20%, rgba(255,255,255,0.85) 50%, rgba(255,255,255,0.65) 80%, transparent);
+  }
+  /* Commercial hero badge */
+  .hero-badge {
+    background: rgba(255,255,255,0.10);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(245,158,11,0.45);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.20), 0 4px 16px rgba(245,158,11,0.15);
+  }
+}
+
+/* Frosted table headers (all admin + result tables, no markup change) */
+thead tr {
+  background: rgba(248, 250, 252, 0.88) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  backdrop-filter: blur(16px) saturate(150%);
+  box-shadow: inset 0 -1px 0 rgba(203,213,225,0.7);
+}
+tbody tr {
+  transition: background 0.18s ease;
+}
+tbody tr:hover {
+  background: rgba(255,255,255,0.72) !important;
+}
+
+/* Liquid-sheen sweep on primary CTAs (signature motion, transform-only) */
+.btn-primary,
+.btn-accent {
+  position: relative;
+}
+.btn-primary::after,
+.btn-accent::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 38%, rgba(255, 255, 255, 0.52) 50%, transparent 62%);
+  transform: translateX(-140%);
+  pointer-events: none;
+}
+.btn-primary:hover::after,
+.btn-accent:hover::after {
+  transform: translateX(140%);
+  transition: transform 0.65s ease;
+}
+
+/* Ambient aurora blobs (transform/opacity only) */
+@keyframes aurora-drift {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  33%       { transform: translate3d(3%, -4%, 0) scale(1.07); }
+  66%       { transform: translate3d(-2%, 3%, 0) scale(1.04); }
+}
+.aurora-blob {
+  animation: aurora-drift 28s ease-in-out infinite;
+}
+
+/* Floating glass orb decoration */
+@keyframes orb-float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50%       { transform: translateY(-10px) rotate(180deg); }
+}
+.orb-float {
+  animation: orb-float 7s ease-in-out infinite;
+}
+
+/* Shimmer loading */
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+.shimmer {
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 100%);
+  background-size: 400px 100%;
+  animation: shimmer 1.6s ease-in-out infinite;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 200;
+  border-radius: 0.75rem;
+  background: #071e45;
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  font-weight: 700;
+  transition: top 0.2s ease;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Flash ticker scroll — pauses on hover/focus */
+@keyframes imof-ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.ticker-track {
+  display: inline-flex;
+  animation: imof-ticker 32s linear infinite;
+}
+.ticker-paused:hover .ticker-track,
+.ticker-paused:focus-within .ticker-track {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track,
+  .aurora-blob { animation: none; }
+  .btn-primary::after,
+  .btn-accent::after { display: none; }
+  * { scroll-behavior: auto !important; }
+}
+
+/* Fallback: no backdrop-filter support → solid surfaces */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .card, .ticket, .glass-panel, .stat-card { background: #ffffff; }
+  .modal-sheet { background: #ffffff; }
+  .glass-ink { background: linear-gradient(180deg, #0b2f6b, #071e45); }
+  .btn-ghost, .input { background: #ffffff; }
+  .glass-band { background: rgba(255,255,255,0.98); }
+}
+
+/* Table scroll affordance */
+.table-scroll {
+  background:
+    linear-gradient(to right, white 30%, transparent),
+    linear-gradient(to left, white 30%, transparent),
+    linear-gradient(to right, rgba(7, 30, 69, 0.12), transparent 24px),
+    linear-gradient(to left, rgba(7, 30, 69, 0.12), transparent 24px);
+  background-attachment: local, local, scroll, scroll;
+  background-repeat: no-repeat;
+  background-size: 24px 100%, 24px 100%, 24px 100%, 24px 100%;
+  background-position: left center, right center, left center, right center;
+}
+
+/* Thin styled scrollbar for palette rows */
+.nice-scroll::-webkit-scrollbar { height: 8px; width: 8px; }
+.nice-scroll::-webkit-scrollbar-track { background: rgba(255,255,255,0.2); border-radius: 8px; }
+.nice-scroll::-webkit-scrollbar-thumb { background: rgba(203,213,225,0.8); border-radius: 8px; }
+.nice-scroll::-webkit-scrollbar-thumb:hover { background: rgba(148,163,184,0.9); }
+
+/* ============================================================
+   IMOF marketing-site graft (imofedu.com) — TYPE + HOVER ONLY
+   Glass surfaces (.card / .glass-ink / .ticket), blur, borders,
+   shadows, radii and all layout grids are intentionally untouched.
+   Direct ports:
+   - menu-links: Righteous 15px uppercase + 5px orange underline
+     slide (left:-100% → 0, #ef7f1b)
+   - hero .btn: hover translateY(-3px), vermilion → white
+   - footer-links: #cfd8dc → #00bcd4
+   - global a/button easing: cubic-bezier(.17,.85,.438,.99)
+   ============================================================ */
+
+/* Signature easing on interactive elements (duration kept snappy for a portal) */
+a, button {
+  transition-timing-function: var(--imof-ease);
+}
+
+/* Display face is now Righteous (IMOF headings/menus); Bubblegum reserved for accents */
+.font-bubble { font-family: var(--font-bubble); }
+
+/* ---- Labels: exact port of imofedu .menu-links hover ----
+   Righteous heading-ink always (like the site's menu); on hover — or when
+   the control is focused — ONLY the orange bar slides in. No color shift,
+   exactly as imofedu.com behaves. The aesthetic risk stands: form labels
+   behave like IMOF nav labels. Layout/sizing unchanged. */
+label.label {
+  position: relative;
+  width: fit-content;
+  max-width: 100%;
+  padding-bottom: 5px;
+  overflow: hidden;
+  cursor: default;
+}
+label.label::after {
+  content: '';
+  position: absolute;
+  left: -100%;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--imof-underline);
+  opacity: 0;
+  transition: left 0.5s var(--imof-ease), opacity 0.35s ease;
+  pointer-events: none;
+}
+label.label:hover::after,
+label.label:focus-within::after,
+div:focus-within > label.label::after {
+  left: 0;
+  opacity: 1;
+}
+
+/* ---- Category image hover: direct port of imofedu .service-slide .image-sr-mm ----
+   Site: white cards with centered icons lift subtly inside the 3D tilt.
+   We add an explicit group-hover lift on top of the gyroscopic tilt so the
+   cat/category icon visibly rises on pointer hover, matching the website. */
+.oly-icon-wrap {
+  position: relative;
+  z-index: 5;
+  overflow: visible !important;
+  transition: filter 0.5s var(--imof-ease);
+}
+.oly-card:hover .oly-icon-wrap,
+.oly-card:focus-within .oly-icon-wrap {
+  z-index: 15;
+  filter: saturate(1.05);
+}
+
+.oly-icon {
+  position: relative;
+  z-index: 20;
+  transition: transform 0.6s var(--imof-ease), filter 0.5s var(--imof-ease);
+  will-change: transform;
+  transform-origin: center bottom;
+  transform: translateZ(12px);
+}
+.oly-card:hover .oly-icon,
+.oly-card:focus-within .oly-icon {
+  transform: translateY(-10px) scale(1.06) translateZ(36px);
+  z-index: 30;
+  filter: drop-shadow(0 6px 12px rgba(7, 30, 69, 0.12));
+}
+/* Touch devices without hover keep the gyro doing the work */
+@media (hover: none) {
+  .oly-card:hover .oly-icon { transform: translateZ(12px); }
+}
+
+/* ---- Footer wave: direct port of imofedu .imof-footer-corporate crest ----
+   Same 1200×100 SVG + 8s animate(values) loop. Fill tuned for the glass-ink
+   gradient so it reads as a crest rather than a solid cap; layout untouched. */
+.imof-footer-wave__path {
+  fill: rgba(19, 37, 74, 0.92);
+}
+.imof-footer-wave {
+  opacity: 0.95;
+}
+@media (prefers-reduced-motion: reduce) {
+  .imof-footer-wave__path animate { display: none; }
+  .oly-icon { transition: none; }
+}
+
+/* ---- Gyroscopic tilt: port of imofedu data-tilt ----
+   Site uses perspective(1000px) + data-tilt-max="5" on service cards,
+   stat images, video reviews. Same physics here: perspective rotate,
+   translateZ depth pop on [data-tilt-pop] (site: translateZ(20px)),
+   transform-only so glass + layout are untouched. */
+.tilt {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.tilt [data-tilt-pop] {
+  transform: translateZ(28px);
+}
+
+/* ---- Header nav: direct port of imofedu .menu-links ---- */
+.imof-navlink {
+  position: relative;
+  overflow: hidden;
+  font-family: var(--font-imof) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 13px !important;
+}
+.imof-navlink::after {
+  content: '';
+  position: absolute;
+  left: -100%;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--imof-underline);
+  opacity: 1;
+  transition: left 0.5s var(--imof-ease);
+  pointer-events: none;
+}
+.imof-navlink:hover::after,
+.imof-navlink:focus-visible::after,
+.imof-navlink[aria-current='page']::after,
+.imof-navlink.active::after {
+  left: 0;
+}
+
+/* ---- Footer links: direct port of imofedu .footer-links ---- */
+.imof-flink {
+  color: #cfd8dc;
+  text-decoration: none;
+  transition: color 0.45s var(--imof-ease), padding-left 0.45s var(--imof-ease);
+}
+.imof-flink:hover,
+.imof-flink:focus-visible {
+  color: var(--imof-cyan);
+  padding-left: 4px;
+}
+
+/* ---- Buttons: IMOF hero-btn lift grafted onto glass CTAs ----
+   Keeps gradients/blur/sheen; adds vermilion-site translateY(-3px). */
+.btn-primary,
+.btn-accent {
+  transition: transform 0.45s var(--imof-ease), filter 0.3s ease, box-shadow 0.45s var(--imof-ease);
+}
+.btn-primary:hover,
+.btn-accent:hover {
+  transform: translateY(-3px);
+}
+.btn-primary:active,
+.btn-accent:active {
+  transform: translateY(-1px);
+}
+
+/* ---- Ghost buttons + tab pills: vermilion-site invert on hover ---- */
+.btn-ghost {
+  transition: transform 0.45s var(--imof-ease), background 0.3s ease, color 0.3s ease;
+}
+.btn-ghost:hover {
+  transform: translateY(-2px);
+}
+
+/* ---- Exam option labels: keep card layout, add IMOF underline cue ---- */
+.omr-option {
+  position: relative;
+  transition: border-color 0.45s var(--imof-ease), background 0.3s ease, transform 0.45s var(--imof-ease), box-shadow 0.3s ease;
+}
+.omr-option:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--glass-shadow);
+}
+
+/* ---- Hero + olympiad header tilt shells: transform-only (Velaris root untouched) ---- */
+.hero-tilt,
+.oly-head-tilt {
+  transform-style: preserve-3d;
+}
+
+/* ---- Hero + section titles: underline slide DISABLED (home-page request) ----
+   h1/h2 stay semantic + selectable; imof-hero-title / imof-sec-title classes
+   removed from Landing.jsx. ::after bar neutralized below so no orange slide
+   appears on hover/focus. label.label + .imof-navlink underlines untouched. */
+.imof-hero-title,
+.imof-sec-title {
+  position: relative;
+  width: fit-content;
+  margin-inline: auto;
+  overflow: hidden;
+  padding-bottom: 8px;
+}
+/* HOME FIX: hero/sec title underline removed (was label.label-pattern ::after
+   + hover/focus slide-in). Guard keeps it off even if the class is re-added. */
+.imof-hero-title::after,
+.imof-sec-title::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* ---- Eyebrow lift (transform-only) ---- */
+.imof-eyebrow {
+  width: fit-content;
+  margin-inline: auto;
+  transition: transform 0.45s var(--imof-ease);
+  will-change: transform;
+}
+.oly-head-tilt:hover .imof-eyebrow,
+.imof-eyebrow:hover {
+  transform: translateY(-3px);
+}
+
+/* ---- Card pills: hover lift only (code-badge underline removed per home request) ----
+   Code badge keeps data-tilt-pop depth, so hover combines translateZ + lift.
+   Class pill stays flat (no data-tilt-pop) for readability — lift only. */
+.oly-code,
+.oly-class {
+  transition: transform 0.45s var(--imof-ease), filter 0.3s ease;
+  will-change: transform;
+}
+.oly-code {
+  position: relative;
+  overflow: hidden;
+}
+/* HOME FIX: card code-badge underline removed (lift + brightness kept).
+   Was menu-links-pattern ::after slide-in on .oly-card hover/focus. */
+.oly-code::after {
+  content: none !important;
+  display: none !important;
+}
+.oly-card:hover .oly-code {
+  transform: translateZ(28px) translateY(-2px);
+  filter: brightness(1.08);
+}
+.oly-card:hover .oly-class,
+.oly-card:focus-within .oly-class {
+  transform: translateY(-2px);
+  filter: brightness(1.04);
+}
+
+/* Touch: gyro carries the motion — kill hover lifts, keep tilt depth pop */
+@media (hover: none) {
+  .oly-head-tilt:hover .imof-eyebrow,
+  .imof-eyebrow:hover,
+  .oly-card:hover .oly-class,
+  .oly-card:focus-within .oly-class {
+    transform: none;
+  }
+  .oly-card:hover .oly-code {
+    transform: translateZ(28px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  label.label::after,
+  .imof-navlink::after,
+  .imof-hero-title::after,
+  .imof-sec-title::after,
+  .oly-code::after { transition: none; }
+  .tilt { transform: none !important; }
+  .imof-eyebrow,
+  .oly-code,
+  .oly-class { transition: none; }
+  .oly-head-tilt:hover .imof-eyebrow,
+  .oly-card:hover .oly-code,
+  .oly-card:hover .oly-class,
+  .oly-card:focus-within .oly-class { transform: none; }
+  label.label:hover::after,
+  label.label:focus-within::after,
+  .imof-navlink:hover::after { left: 0; }
+  .btn-primary:hover, .btn-accent:hover, .btn-ghost:hover, .omr-option:hover { transform: none; }
+}
+
+/* Global focus visibility */
+:focus-visible {
+  outline: 3px solid #f59e0b;
+  outline-offset: 2px;
+}
+header :focus-visible,
+.glass-ink :focus-visible,
+.bg-\[\#0B2F6B\] :focus-visible,
+.bg-\[\#071E45\] :focus-visible {
+  outline-color: #fbbf24;
+}
+
+@media print {
+  header, footer, nav, button, .no-print { display: none !important; }
+  .card, .ticket, .glass-ink, .modal-sheet { box-shadow: none !important; border: 1px solid #ccc !important; background: #fff !important; backdrop-filter: none !important; }
+}
+
+@layer base {
+  .theme {
+    --font-heading: var(--font-sans);
+    --font-sans: 'Geist Variable', sans-serif;
+  }
+  :root {
+    --background: oklch(1 0 0);
+    --foreground: oklch(0.145 0 0);
+    --card: oklch(1 0 0);
+    --card-foreground: oklch(0.145 0 0);
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.145 0 0);
+    --primary: oklch(0.205 0 0);
+    --primary-foreground: oklch(0.985 0 0);
+    --secondary: oklch(0.97 0 0);
+    --secondary-foreground: oklch(0.205 0 0);
+    --muted: oklch(0.97 0 0);
+    --muted-foreground: oklch(0.556 0 0);
+    --accent: oklch(0.97 0 0);
+    --accent-foreground: oklch(0.205 0 0);
+    --destructive: oklch(0.577 0.245 27.325);
+    --border: oklch(0.922 0 0);
+    --input: oklch(0.922 0 0);
+    --ring: oklch(0.708 0 0);
+    --chart-1: oklch(0.87 0 0);
+    --chart-2: oklch(0.556 0 0);
+    --chart-3: oklch(0.439 0 0);
+    --chart-4: oklch(0.371 0 0);
+    --chart-5: oklch(0.269 0 0);
+    --radius: 0.625rem;
+    --sidebar: oklch(0.985 0 0);
+    --sidebar-foreground: oklch(0.145 0 0);
+    --sidebar-primary: oklch(0.205 0 0);
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.97 0 0);
+    --sidebar-accent-foreground: oklch(0.205 0 0);
+    --sidebar-border: oklch(0.922 0 0);
+    --sidebar-ring: oklch(0.708 0 0);
+  }
+  .dark {
+    --background: oklch(0.145 0 0);
+    --foreground: oklch(0.985 0 0);
+    --card: oklch(0.205 0 0);
+    --card-foreground: oklch(0.985 0 0);
+    --popover: oklch(0.205 0 0);
+    --popover-foreground: oklch(0.985 0 0);
+    --primary: oklch(0.922 0 0);
+    --primary-foreground: oklch(0.205 0 0);
+    --secondary: oklch(0.269 0 0);
+    --secondary-foreground: oklch(0.985 0 0);
+    --muted: oklch(0.269 0 0);
+    --muted-foreground: oklch(0.708 0 0);
+    --accent: oklch(0.269 0 0);
+    --accent-foreground: oklch(0.985 0 0);
+    --destructive: oklch(0.704 0.191 22.216);
+    --border: oklch(1 0 0 / 10%);
+    --input: oklch(1 0 0 / 15%);
+    --ring: oklch(0.556 0 0);
+    --chart-1: oklch(0.87 0 0);
+    --chart-2: oklch(0.556 0 0);
+    --chart-3: oklch(0.439 0 0);
+    --chart-4: oklch(0.371 0 0);
+    --chart-5: oklch(0.269 0 0);
+    --sidebar: oklch(0.205 0 0);
+    --sidebar-foreground: oklch(0.985 0 0);
+    --sidebar-primary: oklch(0.488 0.243 264.376);
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.269 0 0);
+    --sidebar-accent-foreground: oklch(0.985 0 0);
+    --sidebar-border: oklch(1 0 0 / 10%);
+    --sidebar-ring: oklch(0.556 0 0);
+  }
+  /* NOTE: shadcn v4-style base rules removed — this project runs Tailwind v3
+     with its own body/typography system above. Theme vars kept for components. */
+}
